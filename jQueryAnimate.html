@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>animate test</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <style>
+      html {
+        background: #f2f2f2;
+      }
+
+      #box {
+        width: 100px;
+        height: 100px;
+
+        background: #FFF;
+
+      }
+    </style>
+
+    <script type="text/javascript">
+    $(function(){
+       $('#box').animate({
+        'marginLeft': '500px'
+    })
+    }
+   );
+    </script>
+  </head>
+  <body>
+
+      <div id="box">
+      </div>
+
+  </body>
+</html>
