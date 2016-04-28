@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>animate test</title>
+
+
+    <script>
+    function moveBar(){
+      var begin = new Date() - 0;
+      var element = document.getElementById('bar');
+      var id = setInterval(function(){
+        var current = new Date() - begin;
+        if (current > 1000){
+          clearInterval(id);
+          current = 1000; // 1000以上になっているので，調整する
+        }
+        element.style.top = current / 10 + 'px';
+          }, 10); // 10ms置きに実行
+      }
+    </script>
+  </head>
+  <body>
+
+      <div id="bar" style="position: absolute; top: 100px; height: 10px; width: 100%; background: rgb(255, 170, 255);">
+      </div>
+      <button onclick="moveBar()">アニメーション実行</button>
+
+  </body>
+</html>
